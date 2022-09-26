@@ -1,3 +1,11 @@
+if test -f "README.md"; then
+    mv README.md README.md.$(`date +%Y%m%d`)
+fi
+
+if test -f "requirements.txt"; then
+    mv requirements.txt requirements.txt.$(`date +%Y%m%d`)
+fi
+
 echo "Downloading README and requirement files from GIT"
 wget https://raw.githubusercontent.com/nlhpc-training/Deep-Learning-Course/master/README.md
 wget https://raw.githubusercontent.com/nlhpc-training/Deep-Learning-Course/master/requirements.txt
