@@ -1,5 +1,15 @@
 # Pasos a seguir para creación de entorno virtual y carga de módulos necesarios para curso de Deep Learning.
 
+## TL;DR
+
+Puede ejecutar el siguiente comando:
+
+```
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/nlhpc-training/Deep-Learning-Course/master/setup-deep-learning-course.sh)"
+```
+
+Si lo anterior presenta problemas puede leer en detalle la configuración del entorno.
+
 ## Acceder a la cuenta mediante SSH.
 
 ```
