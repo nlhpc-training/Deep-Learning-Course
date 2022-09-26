@@ -1,9 +1,11 @@
+export BACKUPFILE=$(date +%Y%m%d)
+
 if test -f "README.md"; then
-    mv README.md README.md.$(`date +%Y%m%d`)
+    mv README.md README.md.$BACKUPFILE
 fi
 
 if test -f "requirements.txt"; then
-    mv requirements.txt requirements.txt.$(`date +%Y%m%d`)
+    mv requirements.txt requirements.txt.$BACKUPFILE
 fi
 
 echo "Downloading README and requirement files from GIT"
