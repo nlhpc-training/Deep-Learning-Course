@@ -1,6 +1,6 @@
 echo "Downloading README and requirement files from GIT"
-wget https://github.com/nlhpc-training/Deep-Learning-Course.git
-wget https://github.com/nlhpc-training/Deep-Learning-Course.git
+wget https://raw.githubusercontent.com/nlhpc-training/Deep-Learning-Course/master/README.md
+wget https://raw.githubusercontent.com/nlhpc-training/Deep-Learning-Course/master/requirements.txt
 
 echo "Loading modules and creating Python virtual environment"
 ml purge
