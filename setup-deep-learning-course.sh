@@ -1,4 +1,4 @@
-export BACKUPFILE=$(date +%Y%m%d)
+export BACKUPFILE=$(date +%s)
 
 if test -f "README.md"; then
     mv README.md README.md.$BACKUPFILE
