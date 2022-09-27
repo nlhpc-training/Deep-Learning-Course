@@ -22,6 +22,8 @@ echo "Loading Python requirements"
 source ~/curso_dl/bin/activate
 pip install -r requirements.txt
 pip install yolo5
+pip install -U scikit-learn
+pip install tensorflow
 
 echo "Checking and editing .bashrc file"
 if grep -q "ml Python" ~/.bashrc; then
