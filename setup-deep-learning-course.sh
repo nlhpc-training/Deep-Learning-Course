@@ -8,9 +8,15 @@ if test -f "requirements.txt"; then
     mv requirements.txt requirements.txt.$BACKUPFILE
 fi
 
-echo "Downloading README and requirement files from GIT"
+if test -f "IMPORTANTE"; then
+    mv IMPORTANTE IMPORTANTE.$BACKUPFILE
+fi
+
+
+echo "Downloading text files from GIT"
 wget https://raw.githubusercontent.com/nlhpc-training/Deep-Learning-Course/master/README.md
 wget https://raw.githubusercontent.com/nlhpc-training/Deep-Learning-Course/master/requirements.txt
+wget https://raw.githubusercontent.com/nlhpc-training/Deep-Learning-Course/master/IMPORTANTE
 
 echo "Loading modules and creating Python virtual environment"
 ml purge
@@ -37,5 +43,12 @@ if grep -q "source curso_dl/bin/activate" ~/.bashrc; then
 else
     echo "source curso_dl/bin/activate" >> ~/.bashrc
 fi
+
+if grep -q "cat IMPORTANTE" ~/.bashrc; then
+    echo "Important message already at .bashrc file"
+else
+    echo "cat IMPORTANTE" >> ~/.bashrc
+fi
+
 
 echo "Done!"
