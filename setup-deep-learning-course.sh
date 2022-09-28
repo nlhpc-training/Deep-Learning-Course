@@ -1,15 +1,15 @@
 export BACKUPFILE=$(date +%s)
 
 if test -f "README.md"; then
-    mv README.md README.md.$BACKUPFILE
+    mv README.md .README.md.$BACKUPFILE
 fi
 
 if test -f "requirements.txt"; then
-    mv requirements.txt requirements.txt.$BACKUPFILE
+    mv requirements.txt .requirements.txt.$BACKUPFILE
 fi
 
 if test -f "IMPORTANTE"; then
-    mv IMPORTANTE IMPORTANTE.$BACKUPFILE
+    mv IMPORTANTE .IMPORTANTE.$BACKUPFILE
 fi
 
 
